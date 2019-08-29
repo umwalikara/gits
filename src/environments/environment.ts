@@ -1,9 +1,12 @@
+import { Key } from 'protractor';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  key:"a61b9ab31ccb058f07e6e1cbf4c36b9fb4be6926"
 };
 
 /*
