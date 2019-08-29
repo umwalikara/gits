@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileFormComponent
+    ProfileFormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
