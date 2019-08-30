@@ -1,5 +1,11 @@
-/* .background{
-    background-image: url(https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/github-universe.jpg?itok=lwRZddXA);
+.image{
+    background-image: url("https://i.pinimg.com/originals/26/f9/f6/26f9f65c12facbf16de3386d34fcd912.jpg");
+    height: 1000px;
     background-repeat: no-repeat;
     background-size: cover;
-} */
+    background-attachment: fixed;
+}
+.container{
+    background-color: transparent;
+    color: rgba(23, 52, 104, 0.795);
+}

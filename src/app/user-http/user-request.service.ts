@@ -20,15 +20,15 @@ export class UserRequestService {
       public_repos: number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.key).toPromise().then(response=>{
-        this.user.username = response.login
-        this.user.profilepic = response.avatar_url
-        this.user.reponum = response.public_repos
+      this.http.get<ApiResponse>("https://api.github.com/users/umwalikara?access_token="+environment.key).toPromise().then(response=>{
+        this.user.login= response.login
+        this.user.avatar_url = response.avatar_url
+        this.user.public_repos = response.public_repos
 
         resolve()
       },
       error=>{
-        this.user.username = "Never, never, never give up"
+        // this.user.username = "Never, never, never give up"
         // this.user.reponum = "Winston Churchill"
 
         reject(error)

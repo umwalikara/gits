@@ -1,5 +1,39 @@
-<!-- <p>
-  search works!
-</p> -->
-<p>{{user.username}}</p>
-<p>{{user.reponum}}</p>
+<!-- <p>search works!</p> -->
+<div class="container card"> <br><br><br>
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{{user.avatar_url}}">
+      </div>
+      <div class="col-md-7">
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Username:</strong> {{user.login}}</li>
+          <li class="list-group-item"><strong>Reponum:</strong> {{user.public_repos}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>{{user.login}}</p>
+<img src="{{user.avatar_url}}">
+<p>{{user.public_repos}}</p> -->

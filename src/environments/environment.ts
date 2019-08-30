@@ -6,7 +6,7 @@ import { Key } from 'protractor';
 
 export const environment = {
   production: false,
-  key:"a61b9ab31ccb058f07e6e1cbf4c36b9fb4be6926"
+  key:"0a4b489c510dc2d198fd316cb0d5ec923a6ca82d"
 };
 
 /*
