@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { User } from '../user';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -13,14 +12,14 @@ export class UserRequestService {
   constructor(private http: HttpClient) {
     this.user = new User("", "", 0);
   }
-  userRequest() {
+  userRequest(username) {
     interface ApiResponse {
       login: string;
       avatar_url: string;
       public_repos: number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/umwalikara?access_token="+environment.key).toPromise().then(response=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token="+environment.key).toPromise().then(response=>{
         this.user.login= response.login
         this.user.avatar_url = response.avatar_url
         this.user.public_repos = response.public_repos

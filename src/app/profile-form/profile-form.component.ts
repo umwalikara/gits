@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+// import { from } from 'rxjs';
 
 @Component({
   selector: 'app-profile-form',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-form.component.css']
 })
 export class ProfileFormComponent implements OnInit {
-
-  constructor() { }
+  
+  goToUrl(username){
+    this.router.navigate(['/search', username])
+  }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }

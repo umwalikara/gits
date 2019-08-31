@@ -5,6 +5,7 @@ import { UserRequestService} from '../user-http/user-request.service';
 import { User } from '../user';
 import { Repository } from '../repository';
 import { RepoRequestService } from '../repo-http/repo-request.service';
+import { ActivatedRoute, ParamMap } from '@angular/router'
 
 @Component({
   selector: 'app-search',
@@ -17,15 +18,16 @@ export class SearchComponent implements OnInit {
   user:User;
   repo:Repository[];
 
-  constructor(private userService:UserRequestService, private repoService:RepoRequestService) {
+  constructor(private userService:UserRequestService, private repoService:RepoRequestService,private route:ActivatedRoute) {
     // this.user = new User("","",0);
    }
 
   ngOnInit() {
-   this.userService.userRequest()
+    let username = this.route.snapshot.paramMap.get('username')
+   this.userService.userRequest(username)
    this.user= this.userService.user
 
-   this.repoService.repoRequest()
+   this.repoService.repoRequest(username)
      this.repo= this.repoService.repo;
     //  console.log(this.repo)  
   }

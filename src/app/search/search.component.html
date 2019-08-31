@@ -9,7 +9,7 @@
         <ul class="list-group">
           <li class="list-group-item"><strong>Username:</strong> {{user.login}}</li>
           <li class="list-group-item"><strong>Reponum:</strong> {{user.public_repos}}</li>
-          <li class="list-group-item" *ngFor='let rep of repo'><strong>Repository:</strong>{{rep.name}},{{rep.html_url}},{{rep.create_at}}</li>
+          <p *ngFor='let rep of repo'><strong>Repository: </strong> {{rep.name}},<a href="{{rep.html_url}}">view details</a>,{{rep.create_at}}</p>
         </ul>
       </div>
     </div>

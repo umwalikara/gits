@@ -3,7 +3,8 @@
 }
 img{
     /* margin: 2%; */
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
+    border-radius: 100%
 }
 .list-group-item{
     background-color: transparent;
