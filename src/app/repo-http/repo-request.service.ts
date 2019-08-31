@@ -10,7 +10,6 @@ export class RepoRequestService {
   repo: Repository[];
 
   constructor(private http: HttpClient) {
-    // this.repo = new Repository("", "", new Date());
     this.repo=[];
   }
   repoRequest(username) {
@@ -24,9 +23,6 @@ export class RepoRequestService {
       this.http.get<ApiResponse>("https://api.github.com/users/"+username+"/repos?access_token="+environment.key).toPromise().then(response => {
         for(var i in response){
         this.repo.push(response[i])
-        // this.repo.name = response.name
-        // this.repo.html_url = response.html_url
-        // this.repo.created_at = response.created_at
 
         resolve()
         }
