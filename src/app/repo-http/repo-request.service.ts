@@ -8,7 +8,7 @@ import { Repository } from '../repository';
 })
 export class RepoRequestService {
   repo: Repository[];
-  private key:String="9a3a19bd39c3ed865eb210e0f22de235240852f5";
+  private key:String="8e64218e8e19a05bedea5c985f2c01636dcf889f";
 
   constructor(private http: HttpClient) {
     this.repo=[];
