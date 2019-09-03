@@ -8,6 +8,7 @@ import { User } from '../user';
 })
 export class UserRequestService {
   user: User;
+  private key:String="9a3a19bd39c3ed865eb210e0f22de235240852f5";
 
   constructor(private http: HttpClient) {
     this.user = new User("", "", 0);
@@ -19,7 +20,7 @@ export class UserRequestService {
       public_repos: number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token="+environment.key).toPromise().then(response=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token="+this.key).toPromise().then(response=>{
         this.user.login= response.login
         this.user.avatar_url = response.avatar_url
         this.user.public_repos = response.public_repos

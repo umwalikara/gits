@@ -1,6 +1,6 @@
 # GitApp
 
-#### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2., on 30 aug,2019
+#### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2., on 30/8/2019
 #### By **UMWALI Clara**
 
 ## Description
